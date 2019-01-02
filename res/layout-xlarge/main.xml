@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="fill_parent" android:layout_width="fill_parent" 
+        android:orientation="horizontal" android:baselineAligned="false">
+
+	<FrameLayout 
+	    android:id="@+id/fragment_container_main"
+	    android:layout_width="0dp"
+	    android:layout_height="match_parent" 
+	    android:layout_weight="6"/>
+
+	<RelativeLayout 
+        android:layout_height="match_parent" android:layout_width="0dp" 
+        android:layout_weight="4">
+		
+		<FrameLayout 
+		    android:id="@+id/fragment_container_song"
+		    android:layout_alignParentTop="true"
+		    android:layout_above="@+id/fragment_container_toolbar"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+			<fragment android:name="com.vuece.controller.ui.SongDetailFragment" 
+			    android:id="@+id/fragment_songdetail"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" />
+		</FrameLayout>
+				
+		<!--    
+				    android:layout_below="@+id/fragment_container_song"
+		--> 
+				<FrameLayout 
+		    android:id="@+id/fragment_container_toolbar"
+		    android:layout_alignParentBottom="true" 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" 
+		    >
+			<fragment android:name="com.vuece.controller.ui.ToolbarFragment" 
+			    android:id="@+id/fragment_toolbar"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    />
+		</FrameLayout>
+	</RelativeLayout>	
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dip"
+    >
+    
+    <ImageView 
+	            android:id="@+id/itemIcon"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"/>
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:padding="5dip"
+	    android:layout_toRightOf="@+id/itemIcon"
+	    >
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content">
+	        <TextView
+	            android:id="@+id/nametext"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true" 
+		        android:layout_toLeftOf="@+id/songCurrentState"
+		        android:singleLine="true"
+		        android:ellipsize="marquee"
+	            android:textColor="@android:color/black"
+	            android:textSize="18sp"
+	        />
+	        <ImageView 
+	            android:id="@+id/songCurrentState"
+	            android:layout_width="wrap_content"
+	            android:layout_height="22dip"
+	            android:layout_alignParentRight="true"/>
+		</RelativeLayout>        
+	    <LinearLayout
+	        android:orientation="horizontal"
+		    android:id="@+id/RelativeBottomLayout" 
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="1dip">
+	
+		    <TextView 
+		        android:layout_width="0px" 
+		        android:layout_height="wrap_content"
+		        android:gravity="left"
+		        android:singleLine="true"
+		        android:ellipsize="end"
+		        android:layout_weight="2"
+		        android:textColor="@android:color/black"
+		        android:id="@+id/bottomtextleft"/>
+		
+		    <TextView 
+		        android:layout_width="0px" 
+		        android:layout_height="wrap_content" 
+		        android:gravity="right"
+		        android:layout_weight="1"
+		        android:singleLine="true"
+		        android:textColor="@android:color/black"
+		        android:id="@+id/bottomtextright"/>
+	
+		</LinearLayout>
+	
+	</LinearLayout>
+</RelativeLayout>

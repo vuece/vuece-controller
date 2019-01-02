@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	
+	        <PreferenceCategory android:title="@string/pref_account">
+	                <EditTextPreference android:title="@string/pref_username" android:editable="false"
+	                        android:key="@string/pref_username_key"></EditTextPreference>
+	<!-- 
+	                <EditTextPreference android:title="@string/pref_passwd"
+	                        android:key="@string/pref_passwd_key" android:password="true"></EditTextPreference>
+	-->               
+	                <CheckBoxPreference android:enabled="true"
+	                        android:selectable="true" android:key="@string/pref_auto_login_key"
+	                        android:title="@string/pref_auto_login"></CheckBoxPreference>
+	        </PreferenceCategory>
+	<!--                       
+	        <PreferenceCategory android:title="@string/pref_filesharing">
+	                <EditTextPreference android:title="@string/pref_default_download_location"
+	                        android:key="@string/pref_default_download_location_key"
+	                        android:defaultValue="/mnt/sdcard/download"
+	                        android:summary="Default Download Location"></EditTextPreference>
+	        </PreferenceCategory>
+	       -->    
+	</PreferenceScreen> 

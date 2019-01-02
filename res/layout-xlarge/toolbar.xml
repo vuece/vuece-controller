@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vuece_hub_view_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#E6F5F1" >
+
+    <RelativeLayout 
+        android:id="@+id/abstract_container"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+        
+    	<TextView
+	          android:id="@+id/leftTitle"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_alignParentLeft="true"
+	          android:layout_toLeftOf="@+id/rightTitle"
+	          android:textColor="@android:color/black"
+	          android:text="Title"/>
+	
+	    <TextView
+	          android:id="@+id/rightTitle"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_alignParentRight="true"
+	          android:gravity="left"
+	          android:textColor="@android:color/black"
+	          android:text="Artist" />
+    </RelativeLayout>
+	<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/abstract_container"
+        android:orientation="horizontal"
+	    > 
+	    <ImageButton
+	        android:id="@+id/shuffle"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:src="@drawable/ic_action_playback_schuffle" />
+	
+	   	<ImageButton
+	        android:id="@+id/prev"
+	        android:src="@drawable/ic_action_playback_prev"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	         />  
+	
+			<!-- style="@android:style/MediaButton.Play" android:background="@drawable/btn_playback_middle"-->
+	    <ImageButton
+			android:id="@+id/pause"
+			android:src="@drawable/ic_action_playback_play"
+			android:contentDescription="@string/button_play_hint"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+			 />
+	        
+	    <ImageButton
+			android:id="@+id/stop"
+			android:src="@drawable/ic_action_playback_stop"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+			 />
+	    	        <!-- style="@android:style/MediaButton.Next" android:background="@drawable/btn_playback_right"-->
+	    <ImageButton
+	        android:id="@+id/next"
+	        android:src="@drawable/ic_action_playback_next"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	         />
+	    <ImageButton
+	        android:id="@+id/repeat"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:src="@drawable/ic_action_playback_repeat" />
+			<!-- style="@android:style/MediaButton.Previous" android:background="@drawable/btn_playback_left"-->
+	</LinearLayout>       
+</RelativeLayout>

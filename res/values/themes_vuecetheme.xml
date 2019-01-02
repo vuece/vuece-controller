@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="VueceTheme" parent="@style/_VueceTheme"/>
+
+  <style name="_VueceTheme" parent="Theme.Sherlock.Light">
+
+    <item name="android:editTextStyle">@style/EditTextVueceTheme</item>
+
+    <item name="android:textColorHighlight">#9999cc03</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewVueceTheme</item>
+
+    <item name="android:checkboxStyle">@style/CheckBoxVueceTheme</item>
+
+    <item name="android:radioButtonStyle">@style/RadioButtonVueceTheme</item>
+
+    <item name="android:buttonStyle">@style/ButtonVueceTheme</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonVueceTheme</item>
+
+    <item name="android:spinnerStyle">@style/SpinnerVueceTheme</item>
+
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemVueceTheme</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarVueceTheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarVueceTheme</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarVueceTheme</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigVueceTheme</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallVueceTheme</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleVueceTheme</item>
+
+    <item name="android:listViewStyle">@style/ListViewVueceTheme</item>
+
+    <item name="android:listViewWhiteStyle">@style/ListViewVueceTheme.White</item>
+
+    <item name="android:spinnerItemStyle">@style/SpinnerItemVueceTheme</item>
+
+  </style>
+
+</resources>

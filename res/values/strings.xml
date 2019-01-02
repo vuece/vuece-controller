@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vuece Music</string>
+    <string name="main_no_items">No contacts</string>
+    <!-- Login screen -->
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="auto_login_hint">Auto Sign-in?</string>
+    <string name="button_login_title">Sign in</string>
+    <string name="button_cancel_title">Cancel</string>
+    <string name="text_initing">Initiating client&#8230;&#8230;</string>
+    <string name="text_connecting">Connecting&#8230;&#8230;</string>
+    <string name="choose_login_account">Please choose a Google Account to Sign in:</string>
+    <!-- toast message -->
+    <string name="login_failed">Sign-in Failed.</string>
+    <string name="logged_out">Signed out.</string>
+    <string name="network_not_connected">No Internet connection. Please check your network settings.</string>
+    <string name="time_out">Connection timeout. Please check your network status.</string>
+    <string name="enter_username_password">Please enter your username and password.</string>
+    <string name="crash_toast_text">Ooooops! Vuece controller crashed, but a report has been sent to the developer to help fix the issue!</string>
+    <!-- main screen -->
+    <string name="text_waiting">Waiting for Hub to be available&#8230;&#8230;</string>
+    <string name="text_no_song">This folder has no song.</string>
+    <string name="button_play_hint">Play/Stop</string>
+    <!-- preferences -->
+    <string name="pref_username_key">username</string>
+    <string name="pref_passwd_key">password</string>
+    <string name="pref_auto_login_key">auto_login</string>
+    <string name="pref_default_download_location_key">download_location</string>
+	<string name="pref_account">Account</string>
+	<string name="pref_username">Username</string>
+	<string name="pref_passwd">Password</string>
+	<string name="pref_auto_login">Auto Sign-in</string>
+	        
+    <string name="nowplaying_title">"Now playing"</string>
+    
+    <string name="action_label_list">List</string>
+    <string name="action_label_song">Song</string>
+    <string name="menu_player_exit_title">Exit</string>
+    <string name="menu_player_settings_title">Setting</string>
+    <string name="menu_player_root_title">Root</string>
+    <string name="menu_player_hub_list">Hubs</string>
+    
+</resources>

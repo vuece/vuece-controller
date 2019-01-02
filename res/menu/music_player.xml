@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+	  xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<!-- icon -->
+	<item android:id="@+id/menu_list" android:showAsAction="ifRoom"
+		android:title="@string/action_label_list" android:icon="@drawable/ic_action_list" />
+	<item android:id="@+id/menu_song" android:showAsAction="ifRoom"
+		android:title="@string/action_label_song" android:icon="@drawable/ic_action_music_1" />
+		<item android:id="@+id/menu_go_root" android:title="@string/menu_player_root_title" android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_home"></item>
+	<item android:id="@+id/menu_hub_list" android:title="@string/menu_player_hub_list" android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_database"></item>
+	<item android:id="@+id/menu_settings" android:title="@string/menu_player_settings_title"
+	    android:icon="@drawable/ic_action_settings" android:showAsAction="ifRoom|withText"></item>
+	<item android:id="@+id/menu_exit" android:title="@string/menu_player_exit_title"
+	    android:icon="@drawable/ic_action_exit" android:showAsAction="ifRoom|withText"></item>
+	   
+</menu>

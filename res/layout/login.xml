@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ededed"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!-- 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ededed"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+        <LinearLayout
+            android:id="@+id/passwordtab"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/vuecetheme_tab_indicator_holo"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Password"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+ 		
+        <LinearLayout
+            android:id="@+id/oauthtab"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/vuecetheme_tab_indicator_holo"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="OAuth"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+ -->
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_vertical"
+	    android:layout_marginLeft="5dip"
+	    android:paddingBottom="5dp"
+	    android:paddingTop="5dp"
+	    android:text="@string/choose_login_account"
+	    android:textColor="@android:color/black"
+	    android:textSize="16sp"
+	    android:textStyle="bold" />
+
+<!--    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:id="@+id/passwordview">
+	    <AutoCompleteTextView
+	        android:id="@+id/txtusername"
+	        style="@style/EditTextVueceTheme"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left|top"
+	        android:layout_margin="5dip"
+	        android:completionThreshold="1"
+	        android:hint="@string/username_hint"
+	        android:imeOptions="actionNext"
+	        android:inputType="textEmailAddress" />
+	
+	    <EditText
+	        android:id="@+id/txtpassword"
+	        style="@style/EditTextVueceTheme"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left|top"
+	        android:layout_margin="5dip"
+	        android:hint="@string/password_hint"
+	        android:inputType="textPassword" />
+    </LinearLayout>
+android:visibility="gone" --> 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical" android:id="@+id/oauthview">
+
+        <Spinner
+            android:id="@+id/accountlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+	    
+    </LinearLayout>
+        
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:text="@string/auto_login_hint"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/checkboxAutoLogin"
+            style="@style/CheckBoxVueceTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="15dip"
+        android:orientation="horizontal" >
+
+        <!-- android:background="@drawable/login_button" -->
+
+        <Button
+            android:id="@+id/buttonCancel"
+            style="@style/ButtonVueceTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dip"
+            android:layout_weight="1"
+            android:text="@string/button_cancel_title"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            style="@style/ButtonVueceTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dip"
+            android:layout_weight="1"
+            android:text="@string/button_login_title"
+            android:textSize="18sp" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutConnecting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="30dip"
+        android:layout_marginTop="15dip"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <!--
+		        <ImageView android:layout_width="wrap_content" android:layout_margin="30dip" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:src="@drawable/spinner_black_76"
+                android:id="@+id/waitingImage"/>
+        -->
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            style="@style/ListSpinner"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/waitingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_margin="20dip"
+            android:gravity="center"
+            android:text="@string/text_initing"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
