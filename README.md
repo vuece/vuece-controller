@@ -9,8 +9,8 @@ Vuece Controller consists of 3 major components
   * supports [Google OAuth2 authentication and authorization](https://developers.google.com/identity/protocols/OAuth2)
   * supports very efficient music file browsing (because file index is transfered from the hub and cached on the device as a sqlite database, database update is triggered only when the MD5 signature is changed on remote Hub) 
   * actual album picture is extracted from remote music file (using ffmpeg library) and displayed on the mobile device, in real-time 
-* A Java Native Interface(JNI) that interacts with Java component and the native libjingle component
-* The native C++ component that uses the customized libjingle library to do the heavy lifting of networking and streaming  
+* A Java Native Interface(JNI) that interacts with Java component and the native libjingle component, relavent source code can be found in [submodules](submodules/vtalk)
+* The native C++ component that uses the customized libjingle library to do the heavy lifting of networking and streaming, detailed compilation configuration can be found in [submodules/vtalk/Android.mk](submodules/vtalk/Android.mk)
 
 See the 'official' user guide and screenshots here: [Vuece Music User Guide](http://www.vuece.com/music.html)
 
