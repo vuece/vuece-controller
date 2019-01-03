@@ -39,4 +39,8 @@ To make the Google Play services APIs available to your app:
 1. Copy the library project at <android-sdk>/extras/google/google_play_services/libproject/google-play-services_lib/ to the location where you maintain your Android app projects.
 2. Import the library project into your Eclipse workspace. Click File > Import, select Android > Existing Android Code into Workspace, and browse to the copy of the library project to import it.
 3. In your app project, reference Google Play services library project. See Referencing a Library Project for Eclipse for more information on how to do this.
-Note: You should be referencing a copy of the library that you copied to your development workspace—you should not reference the library directly from the Android SDK directory.
+*Note*: You should be referencing a copy of the library that you copied to your development workspace, you should not reference the library directly from the Android SDK directory.
+
+
+## Migrate to Android Studio ##
+Since Vuece Music application was developed using Eclipse, *Android Studio* should be used for new development, please refer to official document [Migrate to Android Studio](https://developer.android.com/studio/intro/migrate) regarding how to migrate Android Eclipse project to Android Studio project.
