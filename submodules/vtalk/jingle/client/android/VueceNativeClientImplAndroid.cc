@@ -361,7 +361,6 @@ void InitLoggingFacility(int logging_level)
 
 }
 
-//VueceNativeClientImplAndroid::VueceNativeClientImplAndroid(JavaVM *_jvm, JNIEnv* env, jobject aListener, jint loggingLevel)
 VueceNativeClientImplAndroid::VueceNativeClientImplAndroid(vuece::InitData* init_data)
 {
 #ifdef VUECE_APP_ROLE_HUB_CLIENT
@@ -959,10 +958,6 @@ void VueceNativeClientImplAndroid::OnRosterReceived(const buzz::XmlElement* stan
 		rosterSize++;
 		rosterItem = rosterItem->NextNamed(buzz::QN_ROSTER_ITEM);
 	}
-//	for (const buzz::XmlElement* rosterItem = query->FirstNamed(buzz::QN_ROSTER_ITEM); rosterItem != NULL; rosterItem = query->NextNamed(buzz::QN_ROSTER_ITEM)) {
-//		VueceLogger::Warn("rosterItem. %s", (rosterItem->Str()).c_str());
-//		rosterSize++;
-//	}
 
 	LOG(LS_VERBOSE)
 		<< "VueceNativeClientImplAndroid:OnRosterReceived:Roster size = " << rosterSize;
@@ -1188,22 +1183,6 @@ void VueceNativeClientImplAndroid::OnFileShareStateChanged(const std::string& re
 	LOG(LS_INFO)
 		<< "VueceNativeClientImplAndroid::OnFileShareStateChanged:remote_jid: " << remote_jid << ", share_id: " << share_id << ", state: " << state
 		<< ", empty impl, do nothing and return.";
-//	JNIEnv *env = 0;
-//	jint ret = jvm->AttachCurrentThread(&env, NULL);
-//
-//	if (ret != 0)
-//	{
-//		VueceLogger::Fatal("VueceNativeClientImplAndroid::OnRosterReceived:Cannot attach JVM!");
-//		return;
-//	}
-//
-//	std::string share_id_std_s (share_id);
-//
-//	const char* share_id_str = share_id_std_s.c_str();
-//	jstring share_id_s = env->NewStringUTF(share_id_str);
-//
-//	env->CallVoidMethod(iJNIListenerObj, iJNIMethodOnFileShareStateChanged, share_id_s, (jint) state);
-//	env->DeleteLocalRef(share_id_s);
 }
 
 void VueceNativeClientImplAndroid::OnFileShareRequestReceived(const std::string& share_id, const buzz::Jid& target, int type, const std::string& fileName, int size, bool need_preview)
@@ -1337,55 +1316,6 @@ void VueceNativeClientImplAndroid::OnClientStateChanged(vuece::ClientEvent event
 	VueceNativeInterface::LogClientState(state);
 
 	env->CallVoidMethod(iJNIListenerObj, iJNIMethodOnClientStateChanged, (jint) event, (jint) state);
-
-
-//	switch(event)
-//	{
-//	case CLIENT_EVENT_LOGGING_IN:
-//	{
-//		LOG(INFO) << "VueceNativeClientImplAndroid::OnClientStateChanged - LOGGING_IN";
-//
-//		env->CallVoidMethod(iJNIListenerObj, iJNIMethodOnClientStateChanged, (jint) CLIENT_EVENT_CONNECTION_START);
-//
-//		break;
-//	}
-//	case CLIENT_EVENT_LOGIN_OK:
-//	{
-//		LOG(INFO) << "VueceNativeClientImplAndroid::OnClientStateChanged - LOGGING_OK";
-//
-//		env->CallVoidMethod(iJNIListenerObj, iJNIMethodOnClientStateChanged, (jint) CLIENT_EVENT_SIGNED_IN);
-//		break;
-//	}
-//	case CLIENT_EVENT_AUTH_ERR:
-//	{
-//		LOG(INFO) << "VueceNativeClientImplAndroid::OnClientStateChanged - AUTH_ERR";
-//		exitReason = VueceEvent_Client_AuthFailed;
-//		env->CallVoidMethod(iJNIListenerObj, iJNIMethodOnClientStateChanged, (jint) CLIENT_EVENT_AUTH_FAILED);
-//		break;
-//	}
-//	case CLIENT_EVENT_NETWORK_ERR:
-//	{
-//		LOG(INFO) << "VueceNativeClientImplAndroid::OnClientStateChanged - NETWORK_ERR";
-//		exitReason = VueceEvent_Connection_Failed;
-//
-//		env->CallVoidMethod(iJNIListenerObj, iJNIMethodOnClientStateChanged, (jint) CLIENT_EVENT_CONNECTION_FAILED);
-//		break;
-//	}
-//	case CLIENT_EVENT_LOGGING_OUT:
-//	{
-//		LOG(INFO) << "VueceNativeClientImplAndroid::OnClientStateChanged - LOGGING_OUT";
-//
-//		break;
-//	}
-//	case CLIENT_EVENT_LOGOUT_OK:
-//	{
-//		LOG(INFO) << "VueceNativeClientImplAndroid::OnClientStateChanged - LOGGING_OUT";
-//
-//		env->CallVoidMethod(iJNIListenerObj, iJNIMethodOnClientStateChanged, (jint) CLIENT_EVENT_SIGNED_OUT);
-//
-//		break;
-//	}
-//	}
 }
 
 void VueceNativeClientImplAndroid::TestSendFile()
